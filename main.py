@@ -49,9 +49,3 @@ while game_is_on:
             score_board.game_over()
 
 screen.exitonclick()
-
-
-def game_over():
-    score_board.game_over()
-    game_is_on = False
-    return game_is_on
