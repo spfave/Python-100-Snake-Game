@@ -1,5 +1,6 @@
 from turtle import Turtle
-from game_GUI import width_limit, height_limit
+# from game_GUI import width_limit, height_limit
+from game_engine import width_limit, height_limit
 from random import randint
 
 

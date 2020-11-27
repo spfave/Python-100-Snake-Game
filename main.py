@@ -1,5 +1,6 @@
 # from turtle import Turtle, Screen
-from game_GUI import game_GUI, width_limit, height_limit
+from game_GUI import game_GUI  # , width_limit, height_limit
+import game_engine
 from snake import Snake
 from food import Food
 from scoreboard import ScoreBoard
@@ -32,20 +33,19 @@ while game_is_on:
     snake.move()
 
     # Detect collision with food
-    if snake.head.distance(food) < FOOD_COLLISION_LIMIT:
+    if game_engine.detect_food_collision(snake.head.distance(food)):
         score_board.increase_score()
         snake.extend_snake()
         food.refresh()
 
     # Detect collision with wall
-    if abs(snake.head.xcor()) > width_limit or abs(snake.head.ycor()) > height_limit:
+    if game_engine.detect_wall_collision(snake.head):
         game_is_on = False
         score_board.game_over()
 
     # Detect collision with tail
-    for segment in snake.segments[1:]:  # excludes head segment
-        if snake.head.distance(segment) < 10:
-            game_is_on = False
-            score_board.game_over()
+    if game_engine.detect_tail_collision(snake.segments):
+        game_is_on = False
+        score_board.game_over()
 
 screen.exitonclick()

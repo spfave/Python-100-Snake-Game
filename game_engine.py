@@ -12,6 +12,7 @@ from game_GUI import WINDOWWIDTH, WINDOWHEIGHT
     1. If the game engine is a class what are its attributes?
     2. The Snake, Food, and Scoreboard instances I feel should be game attributes
 
+-   Should constants and variables below in a new module? game_parameters.py
 """
 
 
