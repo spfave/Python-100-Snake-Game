@@ -7,7 +7,7 @@ import time
 
 
 # Constants
-FOODCOLLISIONLIMIT = 15
+FOOD_COLLISION_LIMIT = 15
 
 
 # MAIN --------------------------------------------------------------
@@ -31,8 +31,8 @@ while game_is_on:
 
     snake.move()
 
-    # Detect collision food
-    if snake.head.distance(food) < FOODCOLLISIONLIMIT:
+    # Detect collision with food
+    if snake.head.distance(food) < FOOD_COLLISION_LIMIT:
         score_board.increase_score()
         snake.extend_snake()
         food.refresh()
