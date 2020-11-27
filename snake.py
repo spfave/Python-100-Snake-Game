@@ -33,7 +33,7 @@ class Snake():
         self.segments.append(new_segment)
 
     def extend_snake(self):
-        """ Add segment to snake body """
+        """ Add segment to end of snake body """
         self.add_segment(self.segments[-1].position())
 
     def move(self):

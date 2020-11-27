@@ -11,6 +11,12 @@ import time
 FOOD_COLLISION_LIMIT = 15
 
 
+# Functions
+def game_over():
+    score_board.game_over()
+    return False
+
+
 # MAIN --------------------------------------------------------------
 # Game components and actions
 screen = game_GUI()
@@ -40,12 +46,10 @@ while game_is_on:
 
     # Detect collision with wall
     if game_engine.detect_wall_collision(snake.head):
-        game_is_on = False
-        score_board.game_over()
+        game_is_on = game_over()
 
     # Detect collision with tail
     if game_engine.detect_tail_collision(snake.segments):
-        game_is_on = False
-        score_board.game_over()
+        game_is_on = game_over()
 
 screen.exitonclick()
