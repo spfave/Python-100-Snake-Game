@@ -4,12 +4,11 @@ from turtle import Screen
 # Constants
 WINDOWWIDTH = 600
 WINDOWHEIGHT = 600
-EDGE_OFFSET = 20
 
 
 # Variables
-width_limit = WINDOWWIDTH/2 - EDGE_OFFSET
-height_limit = WINDOWHEIGHT/2 - EDGE_OFFSET
+# width_limit = WINDOWWIDTH/2 - EDGE_OFFSET
+# height_limit = WINDOWHEIGHT/2 - EDGE_OFFSET
 
 
 # Functions
