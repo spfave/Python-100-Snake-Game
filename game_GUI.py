@@ -6,11 +6,6 @@ WINDOWWIDTH = 600
 WINDOWHEIGHT = 600
 
 
-# Variables
-# width_limit = WINDOWWIDTH/2 - EDGE_OFFSET
-# height_limit = WINDOWHEIGHT/2 - EDGE_OFFSET
-
-
 # Functions
 def game_GUI():
     """ Returns game screen """
