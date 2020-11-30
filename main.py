@@ -17,6 +17,11 @@ def game_over():
     return False
 
 
+def game_reset():
+    score_board.game_reset()
+    snake.reset()
+
+
 # MAIN --------------------------------------------------------------
 # Game components and actions
 screen = game_GUI()
@@ -46,10 +51,12 @@ while game_is_on:
 
     # Detect collision with wall
     if game_engine.detect_wall_collision(snake.head):
-        game_is_on = game_over()
+        # game_is_on = game_over()
+        game_reset()
 
     # Detect collision with tail
     if game_engine.detect_tail_collision(snake.segments):
-        game_is_on = game_over()
+        # game_is_on = game_over()
+        game_reset()
 
 screen.exitonclick()

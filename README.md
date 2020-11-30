@@ -6,6 +6,8 @@ Course url: https://www.udemy.com/course/100-days-of-code/
 Section 20,21: Build the Snake Game
 Creation of the popular snake game in Python using the Turtle graphics module.
 
+Section 24: Add high score tracker
+
 <br>
 
 ### Refactoring Thoughts 11/26/20

@@ -18,14 +18,23 @@ class Snake():
         """  """
         self.segments = []
         self.create_snake()
-        self.head = self.segments[0]
+        [].clear()
 
     def create_snake(self):
         """ Create starting snake body and position for game start """
         for position in STARTING_POSITIONS:
             self.add_segment(position)
+        self.head = self.segments[0]
+
+    def reset(self):
+        """ Set snake to starting configuration """
+        for segment in self.segments:   # move Turtle segments off screen - how to delete Turtle?
+            segment.goto(1000, 1000)
+        self.segments.clear()
+        self.create_snake()
 
     def add_segment(self, position):
+        """ Add body segment to snake """
         new_segment = Turtle(shape="square")
         new_segment.color("white")
         new_segment.penup()
