@@ -5,7 +5,6 @@ from game_GUI import WINDOWHEIGHT
 TEXT_SIZE = 16
 TEXT_ALIGNMENT = "center"
 FONT_STYLE = ("Courier", TEXT_SIZE, "bold")
-FILE_PATH = "D:/User/Sebastian/Desktop/"
 
 
 # Variables
@@ -48,9 +47,9 @@ class ScoreBoard(Turtle):
         self.write_score()
 
     def read_high_score(self):
-        with open(f"{FILE_PATH}highscore.txt", mode="r") as file:
+        with open("highscore.txt", mode="r") as file:
             self.high_score = int(file.read())
 
     def write_high_score(self):
-        with open(f"{FILE_PATH}highscore.txt", mode="w") as file:
+        with open("highscore.txt", mode="w") as file:
             file.write(str(self.high_score))
